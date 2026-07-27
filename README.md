@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Next Commerce Architecture
 
-## Getting Started
+Modern Frontend geliştirme prensiplerini, ölçeklenebilir mimariyi ve yazılım tasarım desenlerini uygulamak amacıyla geliştirilmiş Next.js tabanlı bir e-ticaret uygulamasıdır.
 
-First, run the development server:
+Bu proje yalnızca bir e-ticaret uygulaması değil; aynı zamanda gerçek projelerde kullanılan mimari yaklaşımları uygulamak için hazırlanmıştır.
+
+---
+
+# 🚀 Kullanılan Teknolojiler
+
+- Next.js
+- React.js
+- JavaScript
+- Tailwind CSS
+- Zustand
+- Axios
+- Lucide React
+
+---
+
+# 📂 Proje Mimarisi
+
+Projede **Feature-Based Architecture** yaklaşımı benimsenmiştir.
+
+```
+src
+
+├── app
+│
+├── features
+│   ├── products
+│   ├── cart
+│   ├── profile
+│   └── settings
+│
+└── shared
+    ├── api
+    ├── components
+    ├── layouts
+    ├── hooks
+    └── utils
+```
+
+---
+
+# 🎨 Design System
+
+Projede **Atomic Design** yaklaşımı kullanılmıştır.
+
+```
+shared/components
+
+atoms
+molecules
+organisms
+```
+
+Bu sayede bileşenler tekrar kullanılabilir, sürdürülebilir ve ölçeklenebilir hale getirilmiştir.
+
+---
+
+# 🏗️ Uygulanan Design Pattern'ler
+
+Bu projede modern Frontend geliştirmede sık kullanılan birçok tasarım deseni uygulanmıştır.
+
+- ✅ Feature-Based Architecture
+- ✅ Atomic Design
+- ✅ Component Driven Development
+- ✅ Composition Pattern
+- ✅ Custom Hook Pattern
+- ✅ Repository Pattern
+- ✅ Provider Pattern
+- ✅ Adapter Pattern
+- ✅ Strategy Pattern
+- ✅ Observer Pattern
+- ✅ Singleton Pattern
+- ✅ Factory Pattern
+- ✅ Dependency Injection
+
+---
+
+# ✨ Özellikler
+
+- Ürün Listeleme
+- Ürün Arama
+- Kategori Filtreleme
+- Ürün Sıralama
+- Grid / List Görünümü
+- Sepet Yönetimi (Şuanlık Localstorage)
+- Error UI
+
+---
+
+# 📁 Products Feature Yapısı
+
+```
+features/products
+
+api
+providers
+repositories
+adapters
+containers
+hooks
+components
+pages
+strategies
+```
+
+---
+
+# 🧠 Bu Projede Neleri ele aldım?
+
+- Ölçeklenebilir Frontend mimarisi oluşturmayı
+- Design Pattern kullanımını
+- Feature-Based Architecture yaklaşımını
+- Atomic Design prensiplerini
+- Component odaklı geliştirmeyi
+- Business Logic ile UI katmanını ayırmayı
+- Repository ve Adapter Pattern kullanımını
+- Zustand ile state yönetimini
+- Tekrar kullanılabilir Design System oluşturmayı
+- Temiz ve sürdürülebilir kod yazmak.
+
+---
+
+# ⚙️ Kurulum
+
+Projeyi klonlayın.
+
+```bash
+git clone https://github.com/zeynepbass/commercely-patterns.git
+```
+
+Bağımlılıkları yükleyin.
+
+```bash
+npm install
+```
+
+Projeyi çalıştırın.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcıdan aşağıdaki adresi açın.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 🎯 Gelecekte Eklenmesi Planlanan Özellikler
 
-To learn more about Next.js, take a look at the following resources:
+- Authentication
+- Wishlist
+- Checkout
+- Payment Entegrasyonu
+- TanStack Query
+- Unit Test
+- Integration Test
+- CI/CD
+- Docker
+- i18n (Çoklu Dil Desteği)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 📄 Lisans
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu proje **MIT License** ile lisanslanmıştır.
