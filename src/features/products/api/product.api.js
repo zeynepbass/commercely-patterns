@@ -1,43 +1,41 @@
-const BASE_URL = "https://dummyjson.com/products";
+import apiClient from "@/shared/api";
+
 
 export async function getProducts() {
-  const response = await fetch(BASE_URL);
 
-  if (!response.ok) {
-    throw new Error("Products could not be fetched.");
-  }
+  const response = await apiClient.get("/products");
 
-  return response.json();
+  return response.data;
+
 }
+
 
 export async function getProductById(id) {
-  const response = await fetch(`${BASE_URL}/${id}`);
 
-  if (!response.ok) {
-    throw new Error("Product could not be fetched.");
-  }
+  const response = await apiClient.get(`/products/${id}`);
 
-  return response.json();
+  return response.data;
+
 }
+
+
 export async function searchProducts(query) {
-    const response = await fetch(
-      `${BASE_URL}/search?q=${encodeURIComponent(query)}`
-    );
-  
-    if (!response.ok) {
-      throw new Error("Search failed.");
-    }
-  
-    return response.json();
-  }
-  export async function getProductsByCategory(category) {
-    const response = await fetch(
-      `${BASE_URL}/category/${category}`
-    );
-  
-    if (!response.ok) {
-      throw new Error("Category products could not be fetched.");
-    }
-  
-    return response.json();
-  }
+
+  const response = await apiClient.get(
+    `/products/search?q=${query}`
+  );
+
+  return response.data;
+
+}
+
+
+export async function getProductsByCategory(category) {
+
+  const response = await apiClient.get(
+    `/products/category/${category}`
+  );
+
+  return response.data;
+
+}

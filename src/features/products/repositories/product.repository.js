@@ -1,36 +1,28 @@
-import {
-    getProducts,
-    getProductById,
-    searchProducts,
-    getProductsByCategory,
-  } from "../api/product.api";
+export function createProductRepository(provider) {
+    return {
+      async getAll() {
+        const response = await provider.getProducts();
   
-  import { productAdapter } from "../adapters/product.adapter";
+        return response.products;
+      },
   
-  const productRepository = {
-    async getAll() {
-      const response = await getProducts();
+      async getById(id) {
+        const response = await provider.getProductById(id);
   
-      return response.products.map(productAdapter);
-    },
+        return response;
+      },
   
-    async getById(id) {
-      const response = await getProductById(id);
+      async search(query) {
+        const response = await provider.searchProducts(query);
   
-      return productAdapter(response);
-    },
+        return response.products;
+      },
   
-    async search(query) {
-      const response = await searchProducts(query);
+      async getByCategory(category) {
+        const response =
+          await provider.getProductsByCategory(category);
   
-      return response.products.map(productAdapter);
-    },
-  
-    async getByCategory(category) {
-      const response = await getProductsByCategory(category);
-  
-      return response.products.map(productAdapter);
-    },
-  };
-  
-  export default productRepository;
+        return response.products;
+      },
+    };
+  }
