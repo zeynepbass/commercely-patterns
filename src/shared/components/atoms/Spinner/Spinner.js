@@ -2,8 +2,8 @@ import { cn } from "@/shared/utils/cn";
 import {
   DEFAULT_FULLSCREEN,
   DEFAULT_SIZE,
-} from "./constants";
-import { sizes } from "./variants";
+} from "./spinnerConstants";
+import { sizes } from "./spinnerVariants";
 
 export default function Spinner({
   size = DEFAULT_SIZE,

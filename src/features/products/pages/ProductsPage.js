@@ -1,6 +1,5 @@
 "use client";
 
-import ProductEmpty from "../components/ProductEmpty";
 import ProductError from "../components/ProductError";
 import ProductGrid from "../components/ProductGrid";
 import ProductToolbar from "../components/ProductToolbar";
@@ -10,11 +9,14 @@ import useProducts from "../hooks/useProducts";
 export default function ProductsPage() {
   const {
     products,
-
+    view,
+    setView,
     loading,
-
+    search,
+    setSearch,
     error,
-
+    category,
+    setCategory,
     sort,
 
     setSort,
@@ -28,15 +30,20 @@ export default function ProductsPage() {
     return <ProductError message={error} />;
   }
 
-  if (!products.length) {
-    return <ProductEmpty />;
-  }
-
   return (
     <section className="mx-auto max-w-7xl px-4 py-8">
-      <ProductToolbar sort={sort} setSort={setSort} />
+      <ProductToolbar
+        sort={sort}
+        setSort={setSort}
+        category={category}
+        setCategory={setCategory}
+        search={search}
+        setSearch={setSearch}
+        view={view}
+        setView={setView}
+      />
 
-      <ProductGrid products={products} />
+      <ProductGrid products={products} view={view} />
     </section>
   );
 }

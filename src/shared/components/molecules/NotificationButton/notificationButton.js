@@ -1,4 +1,3 @@
-import { cn } from "@/shared/utils/cn";
 
 import Badge from "@/shared/components/atoms/Badge";
 import IconButton from "@/shared/components/atoms/IconButton";
@@ -6,7 +5,7 @@ import IconButton from "@/shared/components/atoms/IconButton";
 import {
   DEFAULT_COUNT,
   MAX_COUNT,
-} from "./constants";
+} from "./notificationConstants";
 
 export default function NotificationButton({
   children,

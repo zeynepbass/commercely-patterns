@@ -4,7 +4,7 @@ import {
   DEFAULT_SIZE,
   DEFAULT_TYPE,
   DEFAULT_VARIANT,
-} from "./constants";
+} from "./buttonConstants";
 import Spinner from "../Spinner";
 
 export default function Button({
@@ -26,7 +26,7 @@ export default function Button({
       disabled={disabled || loading}
       onClick={onClick}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors duration-200",
+        "flex items-center justify-center gap-2 rounded-lg font-medium transition-colors duration-200",
         variants[variant],
         sizes[size],
         fullWidth && "w-full",

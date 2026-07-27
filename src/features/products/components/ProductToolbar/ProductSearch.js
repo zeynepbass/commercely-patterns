@@ -1,10 +1,18 @@
-import SearchInput from "@/shared/components/molecules/SearchInput";
+import { Search } from "lucide-react";
 
-export default function ProductSearch() {
+import Input from "@/shared/components/atoms/Input";
+
+export default function ProductSearch({
+  search,
+  setSearch,
+}) {
   return (
     <div className="w-full md:max-w-sm">
-      <SearchInput
+      <Input
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder="Search products..."
+        leftIcon={<Search size={18} />}
       />
     </div>
   );

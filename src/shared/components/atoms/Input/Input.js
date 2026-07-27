@@ -3,8 +3,8 @@ import {
   DEFAULT_PLACEHOLDER,
   DEFAULT_TYPE,
   DEFAULT_VARIANT,
-} from "./constants";
-import { sizes, variants } from "./variants";
+} from "./inputConstants";
+import { sizes, variants } from "./inputVariants";
 
 export default function Input({
   label,

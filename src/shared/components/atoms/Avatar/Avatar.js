@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { cn } from "@/shared/utils/cn";
 
-import { DEFAULT_ALT, DEFAULT_SIZE } from "./constants";
-import { sizes } from "./variants";
+import { DEFAULT_ALT, DEFAULT_SIZE } from "./avatarConstants";
+import { sizes } from "./avatarVariants";
 
 export default function Avatar({
   src,

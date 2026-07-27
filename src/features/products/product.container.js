@@ -1,8 +1,8 @@
-import productProvider from "../providers/product.provider";
+import productProvider from "../../providers/product.provider";
 
 import {
   createProductRepository,
-} from "../repositories/product.repository";
+} from "./repositories/product.repository";
 
 
 const productRepository =

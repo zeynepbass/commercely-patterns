@@ -1,8 +1,8 @@
-import ProductCardActions from "./ProductCardActions";
-import ProductCardImage from "./ProductCardImage";
-import ProductCardInfo from "./ProductCardInfo";
-import ProductCardPrice from "./ProductCardPrice";
-import ProductCardRating from "./ProductCardRating";
+import ProductCardActions from "../ProductActions.js";
+import ProductCardImage from "../ProductImage";
+import ProductCardInfo from "../ProductInfo";
+import ProductCardPrice from "../ProductPrice";
+import ProductCardRating from "../ProductRating";
 
 export default function ProductCard({ product }) {
   return (

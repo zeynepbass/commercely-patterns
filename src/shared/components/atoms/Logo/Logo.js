@@ -7,9 +7,9 @@ import {
   DEFAULT_HREF,
   DEFAULT_SHOW_TEXT,
   DEFAULT_SIZE,
-} from "./constants";
+} from "./logoConstants";
 
-import { sizes } from "./variants";
+import { sizes } from "./logoVariants";
 
 export default function Logo({
   href = DEFAULT_HREF,

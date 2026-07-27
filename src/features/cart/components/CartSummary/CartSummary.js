@@ -1,4 +1,4 @@
-import Button from "@/shared/components/atoms/Button";
+import Button from "@/shared/components/atoms/Buton";
 import formatPrice from "@/shared/utils/formatPrice";
 
 export default function CartSummary({

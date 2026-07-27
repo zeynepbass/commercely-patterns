@@ -1,4 +1,4 @@
-import * as productApi from "../api/product.api";
+import * as productApi from "../features/products/api/product.api";
 
 const productProvider = {
   getProducts: productApi.getProducts,

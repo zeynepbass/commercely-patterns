@@ -4,9 +4,9 @@ import {
   DEFAULT_ROUNDED,
   DEFAULT_SIZE,
   DEFAULT_VARIANT,
-} from "./constants";
+} from "./badgeConstants";
 
-import { variants, sizes } from "./variants";
+import { variants, sizes } from "./badgeVariants";
 
 export default function Badge({
   children,
