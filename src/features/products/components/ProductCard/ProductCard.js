@@ -1,4 +1,4 @@
-import ProductCardActions from "../ProductActions.js";
+import ProductCardActions from "../ProductActions/index.js";
 import ProductCardImage from "../ProductImage";
 import ProductCardInfo from "../ProductInfo";
 import ProductCardPrice from "../ProductPrice";
